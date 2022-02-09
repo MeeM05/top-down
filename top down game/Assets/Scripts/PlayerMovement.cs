@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         MoveH();
+		MoveV();
     }
 
 
@@ -39,4 +40,11 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horizVelocity, rb.velocity.y);
 
     }
+    void MoveV()
+	{
+		float y = Input.GetAxisRaw("Vertical");
+		vertVelocity = y * speed;
+		rb.velocity = new Vector2(vertVelocity, rb.velocity.x);
+	}
+
 }
