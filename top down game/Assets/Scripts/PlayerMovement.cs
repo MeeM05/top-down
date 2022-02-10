@@ -28,23 +28,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveH();
-		MoveV();
+        Move();
+		
     }
 
 
-    void MoveH()
+    void Move()
     {
         float x = Input.GetAxisRaw("Horizontal");
+		float y = Input.GetAxisRaw("Vertical");
         horizVelocity = x * speed;
-        rb.velocity = new Vector2(horizVelocity, rb.velocity.y);
+		vertVelocity = y * speed;
+        rb.velocity = new Vector2(horizVelocity, vertVelocity);
 
     }
-    void MoveV()
-	{
-		float y = Input.GetAxisRaw("Vertical");
-		vertVelocity = y * speed;
-		rb.velocity = new Vector2(vertVelocity, rb.velocity.x);
-	}
+    
 
 }
