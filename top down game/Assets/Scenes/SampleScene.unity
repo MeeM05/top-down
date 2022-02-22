@@ -596,6 +596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1653317658}
   - component: {fileID: 1653317657}
+  - component: {fileID: 1653317659}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -668,6 +669,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1653317659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653317656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62e8f462e8834ba8900dd17379f5a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1795462369
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1bb208141bd544dc9185f704d58b231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 2008871396}
   healthAmount: 100
 --- !u!4 &1814348932
 Transform:
@@ -806,7 +819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814348930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8175366, y: 4.5377693, z: -182.08495}
+  m_LocalPosition: {x: -4.9, y: 4.5377693, z: -182.08495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -846,7 +859,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -750, y: 350}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2008871396

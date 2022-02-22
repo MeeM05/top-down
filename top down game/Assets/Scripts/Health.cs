@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Health : MonoBehaviour
@@ -14,7 +15,8 @@ public class Health : MonoBehaviour
 	{
 		if (healthAmount <= 0)
 		{
-			Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene(0);
+			//Application.LoadLevel(Application.loadedLevel);
 		}
 
         if(Input.GetKeyDown(KeyCode.E))
