@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private float vertVelocity; 
 	public float speed = 4f;
 
+	private Animator anim;
+
 
     //Dash variables
 
@@ -23,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,10 +40,15 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal");
 		float y = Input.GetAxisRaw("Vertical");
-        horizVelocity = x * speed;
-		vertVelocity = y * speed;
-        rb.velocity = new Vector2(horizVelocity, vertVelocity);
+        
+        Vector2 moveInput = new Vector2(x, y);
+        rb.velocity = moveInput * speed * Time.deltaTime;
+        if(moveInput != Vector2.zero)
+		{
+			anim.SetFloat("XInput", x);
+			anim.SetFloat("YInput", y);
 
+		}
     }
     
 
